@@ -1,0 +1,5 @@
+menuconfig MODULES_VIMANA
+	bool "vimana"
+	default n
+	---help---
+		Enable support for the Vimana custom VTOL module

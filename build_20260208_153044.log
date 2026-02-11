@@ -1,0 +1,443 @@
+fatal: No names found, cannot describe anything.
+-- PX4_GIT_TAG: v0.0.0
+CMake Warning (dev) at CMakeLists.txt:176 (find_package):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.12.3", minimum required is "3") 
+-- PX4 config file: /home/ash-blake/Vimana-PX4-Module/boards/cubepilot/cubeorangeplus/vimana_vtol.px4board
+-- PLATFORM nuttx
+-- TOOLCHAIN arm-none-eabi
+-- ARCHITECTURE px4_fmu-v5
+-- ROMFSROOT px4fmu_common
+-- IO cubepilot_io-v2_default
+-- SERIAL_GPS1 /dev/ttyS2
+-- SERIAL_GPS2 /dev/ttyS5
+-- SERIAL_TEL1 /dev/ttyS0
+-- SERIAL_TEL2 /dev/ttyS1
+-- ROOT_PATH /fs/microsd
+-- PARAM_FILE /fs/mtd_params
+-- UAVCAN_INTERFACES 2
+-- PWM_FREQ 1000000
+-- PX4 config: cubepilot_cubeorangeplus_vimana_vtol
+-- PX4 platform: nuttx
+warning: ARCH_CHIP_UNSET (defined at platforms/nuttx/Kconfig:5) was assigned the value 'y' but got the value 'n' -- check dependencies
+-- The CXX compiler identification is GNU 11.3.1
+-- The C compiler identification is GNU 11.3.1
+-- The ASM compiler identification is GNU
+-- Found assembler: /opt/gcc-arm-none-eabi/bin/arm-none-eabi-gcc
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /opt/gcc-arm-none-eabi/bin/arm-none-eabi-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /opt/gcc-arm-none-eabi/bin/arm-none-eabi-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- cmake build type: MinSizeRel
+-- ccache enabled (export CCACHE_DISABLE=1 to disable)
+-- drivers/px4io: ROMFS including cubepilot_io-v2_default
+CMake Warning (dev) at src/drivers/uavcan/libdronecan/libuavcan/CMakeLists.txt:24 (find_package):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found PythonInterp: /usr/bin/python3 (found version "3.12.3") 
+-- Release build type: MinSizeRel
+-- ROMFS: ROMFS/px4fmu_common
+-- ROMFS:  Adding platforms/nuttx/init/stm32h7/rc.board_arch_defaults -> /etc/init.d/rc.board_arch_defaults
+-- ROMFS:  Adding boards/cubepilot/cubeorangeplus/init/rc.board_defaults -> /etc/init.d/rc.board_defaults
+-- ROMFS:  Adding boards/cubepilot/cubeorangeplus/init/rc.board_sensors -> /etc/init.d/rc.board_sensors
+-- ROMFS:  Adding boards/cubepilot/cubeorangeplus/init/rc.board_mavlink -> /etc/init.d/rc.board_mavlink
+-- ROMFS:  Adding platforms/nuttx/init/rc.board_bootloader_upgrade -> /etc/init.d/rc.board_bootloader_upgrade
+-- ROMFS:  Adding boards/cubepilot/cubeorangeplus/extras/cubepilot_cubeorangeplus_bootloader.bin -> /etc/extras/cubepilot_cubeorangeplus_bootloader.bin
+-- ROMFS:  Adding boards/cubepilot/cubeorangeplus/extras/cubepilot_io-v2_default.bin -> /etc/extras/cubepilot_io-v2_default.bin
+-- Configuring done (8.5s)
+-- Generating done (0.5s)
+-- Build files have been written to: /home/ash-blake/Vimana-PX4-Module/build/cubepilot_cubeorangeplus_vimana_vtol
+[0/1284] git submodule src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client
+[1/1284] Generating ../romfs_files.tar
+[2/1284] git submodule platforms/nuttx/NuttX/nuttx
+[5/1284] Generating output_functions.hpp
+[6/1284] git submodule src/drivers/gps/devices
+[9/1284] Creating airframes.xml
+[10/1284] git submodule src/drivers/uavcan/libdronecan/dsdl
+[11/1284] Generating /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx/tools/jlink-nuttx.so
+[12/1284] git submodule src/drivers/uavcan/libdronecan/libuavcan/dsdl_compiler/pydronecan
+[13/1284] git submodule src/modules/mavlink/mavlink
+[14/1284] Generating px4 event header file
+[16/1284] Generating actuators.json
+[17/1284] ROMFS: copying, generating airframes
+[18/1284] PX4 UAVCAN dsdl compiler
+/home/ash-blake/Vimana-PX4-Module/src/drivers/uavcan/libdronecan/libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py:273: SyntaxWarning: invalid escape sequence '\#'
+  """Replace special characters by their escape sequence.
+[19/1284] Generating Mavlink uAvionix: src/modules/mavlink/mavlink/message_definitions/v1.0/uAvionix.xml
+[20/1284] Generating serial_params.c
+[21/1284] Running dsdl compiler
+/home/ash-blake/Vimana-PX4-Module/src/drivers/uavcan/libdronecan/libuavcan/dsdl_compiler/libuavcan_dsdl_compiler/pyratemp.py:273: SyntaxWarning: invalid escape sequence '\#'
+  """Replace special characters by their escape sequence.
+[22/1284] Generating uORB topic headers
+[23/1284] Generating uORB json files
+[24/1284] Generating Mavlink common: src/modules/mavlink/mavlink/message_definitions/v1.0/common.xml
+[25/1284] Generating /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx/.config
+[26/1284] Generating parameters.xml
+[27/1284] Generating px4_parameters.hpp
+[28/1284] Generating /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx/include/nuttx/config.h, /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx/include/arch/chip
+[29/1284] Building CXX object src/lib/tinybson/CMakeFiles/tinybson.dir/tinybson.cpp.obj
+[30/1284] Building CXX object src/lib/world_magnetic_model/CMakeFiles/world_magnetic_model.dir/geo_mag_declination.cpp.obj
+[31/1284] Building CXX object src/lib/geo/CMakeFiles/geo.dir/geo.cpp.obj
+[32/1284] Building CXX object src/lib/lat_lon_alt/CMakeFiles/lat_lon_alt.dir/lat_lon_alt.cpp.obj
+[33/1284] Building CXX object src/lib/perf/CMakeFiles/perf.dir/perf_counter.cpp.obj
+[34/1284] Building C object src/lib/version/CMakeFiles/version.dir/version.c.obj
+[35/1284] Building CXX object src/lib/wind_estimator/CMakeFiles/wind_estimator.dir/WindEstimator.cpp.obj
+[36/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/driver/uc_can.cpp.obj
+[37/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/marshal/uc_bit_array_copy.cpp.obj
+[38/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/marshal/uc_bit_stream.cpp.obj
+[39/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/marshal/uc_float_spec.cpp.obj
+[40/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/marshal/uc_scalar_codec.cpp.obj
+[41/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/node/uc_generic_publisher.cpp.obj
+[42/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/node/uc_generic_subscriber.cpp.obj
+[43/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/node/uc_global_data_type_registry.cpp.obj
+[44/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/node/uc_scheduler.cpp.obj
+[45/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/node/uc_service_client.cpp.obj
+[46/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/node/uc_timer.cpp.obj
+[47/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/protocol/uc_dynamic_node_id_client.cpp.obj
+[48/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/transport/uc_can_acceptance_filter_configurator.cpp.obj
+[49/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/transport/uc_can_io.cpp.obj
+[50/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/transport/uc_crc.cpp.obj
+[51/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/protocol/uc_node_status_provider.cpp.obj
+[52/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/transport/uc_dispatcher.cpp.obj
+[53/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/transport/uc_frame.cpp.obj
+[54/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/transport/uc_outgoing_transfer_registry.cpp.obj
+[55/1284] Linking CXX static library src/lib/tinybson/libtinybson.a
+[56/1284] Linking CXX static library src/lib/world_magnetic_model/libworld_magnetic_model.a
+[57/1284] Linking CXX static library src/lib/lat_lon_alt/liblat_lon_alt.a
+[58/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/transport/uc_transfer.cpp.obj
+[59/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/transport/uc_transfer_buffer.cpp.obj
+[60/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/transport/uc_transfer_listener.cpp.obj
+[61/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/transport/uc_transfer_receiver.cpp.obj
+[62/1284] Linking CXX static library src/lib/geo/libgeo.a
+[63/1284] Linking CXX static library src/lib/perf/libperf.a
+[64/1284] Linking C static library src/lib/version/libversion.a
+[65/1284] Linking CXX static library src/lib/wind_estimator/libwind_estimator.a
+[66/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/transport/uc_transfer_sender.cpp.obj
+[67/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/uc_data_type.cpp.obj
+[68/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/uc_error.cpp.obj
+[69/1284] Building CXX object src/drivers/uavcan/libdronecan/libuavcan/CMakeFiles/uavcan.dir/src/uc_dynamic_memory.cpp.obj
+[70/1284] Building CXX object src/drivers/uavcan/libuavcan_drivers/CMakeFiles/uavcan_stm32h7_driver.dir/src/uc_stm32h7_thread.cpp.obj
+[71/1284] Building CXX object src/modules/commander/ModeUtil/CMakeFiles/mode_util.dir/control_mode.cpp.obj
+[72/1284] Building CXX object src/modules/commander/ModeUtil/CMakeFiles/mode_util.dir/mode_requirements.cpp.obj
+[73/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/control.cpp.obj
+[74/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/covariance.cpp.obj
+[75/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/ekf.cpp.obj
+[76/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/ekf_helper.cpp.obj
+[77/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/estimator_interface.cpp.obj
+[78/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/height_control.cpp.obj
+[79/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/velocity_fusion.cpp.obj
+[80/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/position_fusion.cpp.obj
+[81/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/yaw_fusion.cpp.obj
+[82/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/imu_down_sampler/imu_down_sampler.cpp.obj
+[83/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/fake_height_control.cpp.obj
+[84/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/fake_pos_control.cpp.obj
+[85/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/ZeroGyroUpdate.cpp.obj
+[86/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/ZeroVelocityUpdate.cpp.obj
+[87/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/zero_innovation_heading_update.cpp.obj
+[88/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/airspeed/airspeed_fusion.cpp.obj
+[89/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/aux_global_position/aux_global_position.cpp.obj
+[90/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/auxvel/auxvel_fusion.cpp.obj
+[91/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/barometer/baro_height_control.cpp.obj
+[92/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/external_vision/ev_control.cpp.obj
+[93/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/external_vision/ev_height_control.cpp.obj
+[94/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/external_vision/ev_pos_control.cpp.obj
+[95/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/external_vision/ev_vel_control.cpp.obj
+[96/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/drag/drag_fusion.cpp.obj
+[97/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/external_vision/ev_yaw_control.cpp.obj
+[98/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/gnss/gnss_checks.cpp.obj
+[99/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/gravity/gravity_fusion.cpp.obj
+[100/1284] Linking CXX static library src/modules/commander/ModeUtil/libmode_util.a
+[101/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/gnss/gnss_height_control.cpp.obj
+[102/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/gnss/gps_control.cpp.obj
+[103/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/gnss/gnss_yaw_control.cpp.obj
+[104/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/magnetometer/mag_control.cpp.obj
+[105/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/magnetometer/mag_fusion.cpp.obj
+[106/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/optical_flow/optical_flow_control.cpp.obj
+[107/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/optical_flow/optical_flow_fusion.cpp.obj
+[108/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/range_finder/range_finder_consistency_check.cpp.obj
+[109/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/range_finder/range_height_control.cpp.obj
+[110/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/terrain_control.cpp.obj
+[111/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/range_finder/range_height_fusion.cpp.obj
+[112/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/range_finder/sensor_range_finder.cpp.obj
+[113/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/aid_sources/sideslip/sideslip_fusion.cpp.obj
+[114/1284] Building CXX object src/modules/ekf2/EKF/CMakeFiles/ecl_EKF.dir/wind.cpp.obj
+[115/1284] Building CXX object src/modules/ekf2/EKF/bias_estimator/CMakeFiles/bias_estimator.dir/bias_estimator.cpp.obj
+[116/1284] Building CXX object src/modules/ekf2/EKF/output_predictor/CMakeFiles/output_predictor.dir/output_predictor.cpp.obj
+[117/1284] Building CXX object src/modules/ekf2/EKF/yaw_estimator/CMakeFiles/yaw_estimator.dir/EKFGSF_yaw.cpp.obj
+[118/1284] Linking CXX static library src/drivers/uavcan/libdronecan/libuavcan/libuavcan.a
+[119/1284] Creating directories for 'libmicroxrceddsclient_project'
+[120/1284] Linking CXX static library src/modules/ekf2/EKF/bias_estimator/libbias_estimator.a
+[121/1284] Generating nuttx/crypto/libcrypto.a
+[122/1284] No download step for 'libmicroxrceddsclient_project'
+[123/1284] Linking CXX static library src/modules/ekf2/EKF/output_predictor/liboutput_predictor.a
+[124/1284] Linking CXX static library src/modules/ekf2/EKF/yaw_estimator/libyaw_estimator.a
+[125/1284] No update step for 'libmicroxrceddsclient_project'
+[126/1284] No patch step for 'libmicroxrceddsclient_project'
+[127/1284] Generating nuttx/boards/libboards.a
+[128/1284] Generating nuttx/arch/arm/src/libarch.a
+FAILED: NuttX/nuttx/arch/arm/src/libarch.a /home/ash-blake/Vimana-PX4-Module/build/cubepilot_cubeorangeplus_vimana_vtol/NuttX/nuttx/arch/arm/src/libarch.a 
+cd /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx && /usr/bin/cmake -E remove -f /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx/arch/arm/src/libarch.a && find arch/arm/src -type f -name *.o -delete && make -C arch/arm/src --no-print-directory --silent all TOPDIR="/home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx" KERNEL=y EXTRAFLAGS=-D__KERNEL__ && /usr/bin/cmake -E copy_if_different /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx/arch/arm/src/libarch.a /home/ash-blake/Vimana-PX4-Module/build/cubepilot_cubeorangeplus_vimana_vtol/NuttX/nuttx/arch/arm/src/libarch.a
+common/gnu/arm_testset.S: Assembler messages:
+common/gnu/arm_testset.S:85: Error: selected processor does not support `ldrexb r2,[r0]' in ARM mode
+common/gnu/arm_testset.S:91: Error: selected processor does not support `strexb r2,r1,[r0]' in ARM mode
+common/gnu/arm_testset.S:97: Error: selected processor does not support `dmb' in ARM mode
+make[1]: *** [Makefile:129: arm_testset.o] Error 1
+[129/1284] Generating nuttx/sched/libsched.a
+FAILED: NuttX/nuttx/sched/libsched.a /home/ash-blake/Vimana-PX4-Module/build/cubepilot_cubeorangeplus_vimana_vtol/NuttX/nuttx/sched/libsched.a 
+cd /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx && /usr/bin/cmake -E remove -f /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx/sched/libsched.a && find sched -type f -name *.o -delete && make -C sched --no-print-directory --silent all TOPDIR="/home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx" KERNEL=y EXTRAFLAGS=-D__KERNEL__ && /usr/bin/cmake -E copy_if_different /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx/sched/libsched.a /home/ash-blake/Vimana-PX4-Module/build/cubepilot_cubeorangeplus_vimana_vtol/NuttX/nuttx/sched/libsched.a
+/tmp/cckTxfvq.s: Assembler messages:
+/tmp/cckTxfvq.s:274: Error: selected processor does not support requested special purpose register -- `mrs r4,basepri'
+/tmp/cckTxfvq.s:295: Error: selected processor does not support requested special purpose register -- `mrs r3,primask'
+/tmp/cckTxfvq.s:296: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cckTxfvq.s:297: Error: selected processor does not support requested special purpose register -- `msr basepri,r2'
+/tmp/cckTxfvq.s:298: Error: selected processor does not support requested special purpose register -- `msr primask,r3'
+/tmp/cckTxfvq.s:329: Error: selected processor does not support requested special purpose register -- `msr basepri,r4'
+/tmp/cckTxfvq.s:400: Error: selected processor does not support requested special purpose register -- `mrs r5,basepri'
+/tmp/cckTxfvq.s:421: Error: selected processor does not support requested special purpose register -- `mrs r3,primask'
+/tmp/cckTxfvq.s:422: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cckTxfvq.s:423: Error: selected processor does not support requested special purpose register -- `msr basepri,r2'
+/tmp/cckTxfvq.s:424: Error: selected processor does not support requested special purpose register -- `msr primask,r3'
+/tmp/cckTxfvq.s:474: Error: selected processor does not support requested special purpose register -- `msr basepri,r5'
+make[1]: *** [Makefile:58: clock_initialize.o] Error 1
+[130/1284] Generating nuttx/libs/libxx/libxx.a
+[131/1284] Generating nuttx/libs/libc/libc.a
+FAILED: NuttX/nuttx/libs/libc/libc.a /home/ash-blake/Vimana-PX4-Module/build/cubepilot_cubeorangeplus_vimana_vtol/NuttX/nuttx/libs/libc/libc.a 
+cd /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx && /usr/bin/cmake -E remove -f /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx/libs/libc/libc.a && find libs/libc -type f -name *.o -delete && make -C libs/libc --no-print-directory --silent all TOPDIR="/home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx" KERNEL=n EXTRAFLAGS= && /usr/bin/cmake -E copy_if_different /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx/libs/libc/libc.a /home/ash-blake/Vimana-PX4-Module/build/cubepilot_cubeorangeplus_vimana_vtol/NuttX/nuttx/libs/libc/libc.a
+machine/arm/armv7-m/gnu/arch_memcpy.S: Assembler messages:
+machine/arm/armv7-m/gnu/arch_memcpy.S:173: Error: cannot honor width suffix -- `and r14,r0,#3'
+machine/arm/armv7-m/gnu/arch_memcpy.S:174: Error: selected processor does not support `bfi r14,r1,#2,#2' in Thumb mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:176: Error: selected processor does not support `tbb [r3,r14]' in Thumb mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:186: Error: cannot honor width suffix -- `ldrb r3,[r1],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:187: Error: cannot honor width suffix -- `strb r3,[r0],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:188: Error: cannot honor width suffix -- `sub r2,r2,#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:195: Error: cannot honor width suffix -- `ldrb r3,[r1],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:196: Error: cannot honor width suffix -- `strb r3,[r0],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:197: Error: cannot honor width suffix -- `sub r2,r2,#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:204: Error: cannot honor width suffix -- `ldrb r3,[r1],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:205: Error: cannot honor width suffix -- `strb r3,[r0],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:206: Error: cannot honor width suffix -- `sub r2,r2,#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:213: Error: cannot honor width suffix -- `push {r4-r12}'
+machine/arm/armv7-m/gnu/arch_memcpy.S:223: Error: cannot honor width suffix -- `ldmia r1!,{r3-r12}'
+machine/arm/armv7-m/gnu/arch_memcpy.S:224: Error: cannot honor width suffix -- `stmia r0!,{r3-r12}'
+machine/arm/armv7-m/gnu/arch_memcpy.S:225: Error: cannot honor width suffix -- `sub r2,r2,#0x28'
+machine/arm/armv7-m/gnu/arch_memcpy.S:234: Error: cannot honor width suffix -- `ldr r14,=MEM_LongCopyTable'
+machine/arm/armv7-m/gnu/arch_memcpy.S:235: Error: cannot honor width suffix -- `lsr r11,r2,#0x02'
+machine/arm/armv7-m/gnu/arch_memcpy.S:236: Error: selected processor does not support `tbb [r14,r11]' in Thumb mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:241: Error: selected processor does not support `ldr.w r3,[r1],#0x04' in Thumb-2 mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:242: Error: selected processor does not support `str.w r3,[r0],#0x04' in Thumb-2 mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:244: Error: selected processor does not support `ldmia.w r1!,{r3-r4}' in Thumb-2 mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:245: Error: selected processor does not support `stmia.w r0!,{r3-r4}' in Thumb-2 mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:247: Error: selected processor does not support `ldmia.w r1!,{r3-r5}' in Thumb-2 mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:248: Error: selected processor does not support `stmia.w r0!,{r3-r5}' in Thumb-2 mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:250: Error: selected processor does not support `ldmia.w r1!,{r3-r6}' in Thumb-2 mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:251: Error: selected processor does not support `stmia.w r0!,{r3-r6}' in Thumb-2 mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:253: Error: selected processor does not support `ldmia.w r1!,{r3-r7}' in Thumb-2 mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:254: Error: selected processor does not support `stmia.w r0!,{r3-r7}' in Thumb-2 mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:256: Error: selected processor does not support `ldmia.w r1!,{r3-r8}' in Thumb-2 mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:257: Error: selected processor does not support `stmia.w r0!,{r3-r8}' in Thumb-2 mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:259: Error: selected processor does not support `ldmia.w r1!,{r3-r9}' in Thumb-2 mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:260: Error: selected processor does not support `stmia.w r0!,{r3-r9}' in Thumb-2 mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:262: Error: selected processor does not support `ldmia.w r1!,{r3-r10}' in Thumb-2 mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:263: Error: selected processor does not support `stmia.w r0!,{r3-r10}' in Thumb-2 mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:265: Error: selected processor does not support `ldmia.w r1!,{r3-r11}' in Thumb-2 mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:266: Error: selected processor does not support `stmia.w r0!,{r3-r11}' in Thumb-2 mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:269: Error: cannot honor width suffix -- `pop {r4-r12}'
+machine/arm/armv7-m/gnu/arch_memcpy.S:270: Error: cannot honor width suffix -- `and r2,r2,#0x03'
+machine/arm/armv7-m/gnu/arch_memcpy.S:278: Error: selected processor does not support `it eq' in Thumb mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:279: Error: thumb conditional instruction should be in IT block -- `popeq {pc}'
+machine/arm/armv7-m/gnu/arch_memcpy.S:280: Error: cannot honor width suffix -- `ldrb r3,[r1],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:281: Error: cannot honor width suffix -- `strb r3,[r0],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:283: Error: selected processor does not support `it eq' in Thumb mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:284: Error: thumb conditional instruction should be in IT block -- `popeq {pc}'
+machine/arm/armv7-m/gnu/arch_memcpy.S:285: Error: cannot honor width suffix -- `ldrb r3,[r1],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:286: Error: cannot honor width suffix -- `strb r3,[r0],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:288: Error: selected processor does not support `it eq' in Thumb mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:289: Error: thumb conditional instruction should be in IT block -- `popeq {pc}'
+machine/arm/armv7-m/gnu/arch_memcpy.S:290: Error: cannot honor width suffix -- `ldrb r3,[r1],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:291: Error: cannot honor width suffix -- `strb r3,[r0],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:301: Error: cannot honor width suffix -- `ldrb r3,[r1],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:302: Error: cannot honor width suffix -- `strb r3,[r0],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:303: Error: cannot honor width suffix -- `sub r2,r2,#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:310: Error: cannot honor width suffix -- `ldrb r3,[r1],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:311: Error: cannot honor width suffix -- `strb r3,[r0],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:312: Error: cannot honor width suffix -- `sub r2,r2,#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:319: Error: cannot honor width suffix -- `ldrb r3,[r1],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:320: Error: cannot honor width suffix -- `strb r3,[r0],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:321: Error: cannot honor width suffix -- `sub r2,r2,#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:331: Error: cannot honor width suffix -- `push {r4-r12}'
+machine/arm/armv7-m/gnu/arch_memcpy.S:336: Error: cannot honor width suffix -- `ldmia r1!,{r3-r12}'
+machine/arm/armv7-m/gnu/arch_memcpy.S:338: Error: cannot honor width suffix -- `strh r3,[r0],#0x02'
+machine/arm/armv7-m/gnu/arch_memcpy.S:340: Error: cannot honor width suffix -- `lsr r3,r3,#0x10'
+machine/arm/armv7-m/gnu/arch_memcpy.S:341: Error: selected processor does not support `bfi r3,r4,#0x10,#0x10' in Thumb mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:342: Error: cannot honor width suffix -- `lsr r4,r4,#0x10'
+machine/arm/armv7-m/gnu/arch_memcpy.S:343: Error: selected processor does not support `bfi r4,r5,#0x10,#0x10' in Thumb mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:344: Error: cannot honor width suffix -- `lsr r5,r5,#0x10'
+machine/arm/armv7-m/gnu/arch_memcpy.S:345: Error: selected processor does not support `bfi r5,r6,#0x10,#0x10' in Thumb mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:346: Error: cannot honor width suffix -- `lsr r6,r6,#0x10'
+machine/arm/armv7-m/gnu/arch_memcpy.S:347: Error: selected processor does not support `bfi r6,r7,#0x10,#0x10' in Thumb mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:348: Error: cannot honor width suffix -- `lsr r7,r7,#0x10'
+machine/arm/armv7-m/gnu/arch_memcpy.S:349: Error: selected processor does not support `bfi r7,r8,#0x10,#0x10' in Thumb mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:350: Error: cannot honor width suffix -- `lsr r8,r8,#0x10'
+machine/arm/armv7-m/gnu/arch_memcpy.S:351: Error: selected processor does not support `bfi r8,r9,#0x10,#0x10' in Thumb mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:352: Error: cannot honor width suffix -- `lsr r9,r9,#0x10'
+machine/arm/armv7-m/gnu/arch_memcpy.S:353: Error: selected processor does not support `bfi r9,r10,#0x10,#0x10' in Thumb mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:354: Error: cannot honor width suffix -- `lsr r10,r10,#0x10'
+machine/arm/armv7-m/gnu/arch_memcpy.S:355: Error: selected processor does not support `bfi r10,r11,#0x10,#0x10' in Thumb mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:356: Error: cannot honor width suffix -- `lsr r11,r11,#0x10'
+machine/arm/armv7-m/gnu/arch_memcpy.S:357: Error: selected processor does not support `bfi r11,r12,#0x10,#0x10' in Thumb mode
+machine/arm/armv7-m/gnu/arch_memcpy.S:358: Error: cannot honor width suffix -- `stmia r0!,{r3-r11}'
+machine/arm/armv7-m/gnu/arch_memcpy.S:359: Error: cannot honor width suffix -- `lsr r12,r12,#0x10'
+machine/arm/armv7-m/gnu/arch_memcpy.S:360: Error: cannot honor width suffix -- `strh r12,[r0],#0x02'
+machine/arm/armv7-m/gnu/arch_memcpy.S:362: Error: cannot honor width suffix -- `sub r2,r2,#0x28'
+machine/arm/armv7-m/gnu/arch_memcpy.S:365: Error: cannot honor width suffix -- `pop {r4-r12}'
+machine/arm/armv7-m/gnu/arch_memcpy.S:370: Error: cannot honor width suffix -- `ldr r3,[r1],#0x04'
+machine/arm/armv7-m/gnu/arch_memcpy.S:371: Error: cannot honor width suffix -- `strh r3,[r0],#0x02'
+machine/arm/armv7-m/gnu/arch_memcpy.S:372: Error: cannot honor width suffix -- `lsr r3,r3,#0x10'
+machine/arm/armv7-m/gnu/arch_memcpy.S:373: Error: cannot honor width suffix -- `strh r3,[r0],#0x02'
+machine/arm/armv7-m/gnu/arch_memcpy.S:374: Error: cannot honor width suffix -- `sub r2,r2,#0x04'
+machine/arm/armv7-m/gnu/arch_memcpy.S:386: Error: cannot honor width suffix -- `ldrb r3,[r1],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:387: Error: cannot honor width suffix -- `strb r3,[r0],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:388: Error: cannot honor width suffix -- `sub r2,r2,#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:397: Error: cannot honor width suffix -- `ldrb r3,[r1],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:398: Error: cannot honor width suffix -- `strb r3,[r0],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:399: Error: cannot honor width suffix -- `sub r2,r2,#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:410: Error: cannot honor width suffix -- `ldrb r3,[r1],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:411: Error: cannot honor width suffix -- `strb r3,[r0],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:412: Error: cannot honor width suffix -- `sub r2,r2,#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:422: Error: cannot honor width suffix -- `ldr r3,[r1],#0x04'
+machine/arm/armv7-m/gnu/arch_memcpy.S:423: Error: cannot honor width suffix -- `strb r3,[r0],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:424: Error: cannot honor width suffix -- `lsr r3,r3,#0x08'
+machine/arm/armv7-m/gnu/arch_memcpy.S:425: Error: cannot honor width suffix -- `strh r3,[r0],#0x02'
+machine/arm/armv7-m/gnu/arch_memcpy.S:426: Error: cannot honor width suffix -- `lsr r3,r3,#0x10'
+machine/arm/armv7-m/gnu/arch_memcpy.S:427: Error: cannot honor width suffix -- `strb r3,[r0],#0x01'
+machine/arm/armv7-m/gnu/arch_memcpy.S:428: Error: cannot honor width suffix -- `sub r2,r2,#0x04'
+make[1]: *** [Makefile:129: bin/arch_memcpy.o] Error 1
+[132/1284] Linking CXX static library src/modules/ekf2/EKF/libecl_EKF.a
+[133/1284] Generating nuttx/binfmt/libbinfmt.a
+[134/1284] Generating nuttx/mm/libmm.a
+FAILED: NuttX/nuttx/mm/libmm.a /home/ash-blake/Vimana-PX4-Module/build/cubepilot_cubeorangeplus_vimana_vtol/NuttX/nuttx/mm/libmm.a 
+cd /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx && /usr/bin/cmake -E remove -f /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx/mm/libmm.a && find mm -type f -name *.o -delete && make -C mm --no-print-directory --silent libmm.a TOPDIR="/home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx" KERNEL=n EXTRAFLAGS= && /usr/bin/cmake -E copy_if_different /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx/mm/libmm.a /home/ash-blake/Vimana-PX4-Module/build/cubepilot_cubeorangeplus_vimana_vtol/NuttX/nuttx/mm/libmm.a
+/tmp/ccwd7EZK.s: Assembler messages:
+/tmp/ccwd7EZK.s:82: Error: selected processor does not support requested special purpose register -- `mrs r3,basepri'
+/tmp/ccwd7EZK.s:103: Error: selected processor does not support requested special purpose register -- `mrs r2,primask'
+/tmp/ccwd7EZK.s:104: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccwd7EZK.s:105: Error: selected processor does not support requested special purpose register -- `msr basepri,r1'
+/tmp/ccwd7EZK.s:106: Error: selected processor does not support requested special purpose register -- `msr primask,r2'
+/tmp/ccwd7EZK.s:149: Error: selected processor does not support requested special purpose register -- `msr basepri,r3'
+make[1]: *** [Makefile:55: bin/mm_free.o] Error 1
+[135/1284] Generating px4 event json file from source
+[136/1284] Performing configure step for 'libmicroxrceddsclient_project'
+[137/1284] Generating uORB topic sources
+[138/1284] Building CXX object src/drivers/uavcan/libuavcan_drivers/CMakeFiles/uavcan_stm32h7_driver.dir/src/uc_stm32h7_can.cpp.obj
+FAILED: src/drivers/uavcan/libuavcan_drivers/CMakeFiles/uavcan_stm32h7_driver.dir/src/uc_stm32h7_can.cpp.obj 
+/usr/bin/ccache /opt/gcc-arm-none-eabi/bin/arm-none-eabi-g++ -DCONFIG_ARCH_BOARD_CUBEPILOT_CUBEORANGEPLUS -DUAVCAN_CPP_VERSION=UAVCAN_CPP03 -DUAVCAN_DRIVER=uavcan_stm32h7 -DUAVCAN_IMPLEMENT_PLACEMENT_NEW=1 -DUAVCAN_MEM_POOL_BLOCK_SIZE=48 -DUAVCAN_NO_ASSERTIONS -DUAVCAN_NUM_IFACES=2 -DUAVCAN_PLATFORM=generic -DUAVCAN_STM32H7_NUM_IFACES=2 -DUAVCAN_STM32H7_NUTTX=1 -DUAVCAN_STM32H7_TIMER_NUMBER=5 -D_SYS_CDEFS_H_ -D_SYS_REENT_H_ -D__CUSTOM_FILE_IO__ -D__PX4_NUTTX -D__STDC_FORMAT_MACROS -I/home/ash-blake/Vimana-PX4-Module/boards/cubepilot/cubeorangeplus/src -I/home/ash-blake/Vimana-PX4-Module/platforms/nuttx/src/px4/common/include -I/home/ash-blake/Vimana-PX4-Module/build/cubepilot_cubeorangeplus_vimana_vtol -I/home/ash-blake/Vimana-PX4-Module/build/cubepilot_cubeorangeplus_vimana_vtol/src/lib -I/home/ash-blake/Vimana-PX4-Module/platforms/nuttx/src/px4/stm/stm32h7/include -I/home/ash-blake/Vimana-PX4-Module/platforms/common -I/home/ash-blake/Vimana-PX4-Module/platforms/common/include -I/home/ash-blake/Vimana-PX4-Module/src -I/home/ash-blake/Vimana-PX4-Module/src/include -I/home/ash-blake/Vimana-PX4-Module/src/lib -I/home/ash-blake/Vimana-PX4-Module/src/lib/matrix -I/home/ash-blake/Vimana-PX4-Module/src/modules -I/home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx/arch/arm/src/armv7-m -I/home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx/arch/arm/src/chip -I/home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx/arch/arm/src/common -I/home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/apps/include -I/home/ash-blake/Vimana-PX4-Module/build/cubepilot_cubeorangeplus_vimana_vtol/external/Install/include -I/home/ash-blake/Vimana-PX4-Module/src/drivers/uavcan/uavcan_drivers/stm32h7/driver/./include -I/home/ash-blake/Vimana-PX4-Module/src/drivers/uavcan/libdronecan/libuavcan/include -I/home/ash-blake/Vimana-PX4-Module/src/drivers/uavcan/libdronecan/libuavcan/include/dsdlc_generated -isystem /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/include/cxx -isystem /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx/include/cxx -isystem /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx/include -Os -DNDEBUG -std=gnu++14 -g -fdata-sections -ffunction-sections -fomit-frame-pointer -fmerge-all-constants -fno-signed-zeros -fno-trapping-math -freciprocal-math -fno-math-errno -fno-strict-aliasing -fvisibility=hidden -include visibility.h -Wall -Wextra -Werror -Warray-bounds -Wcast-align -Wdisabled-optimization -Wdouble-promotion -Wfatal-errors -Wfloat-equal -Wformat-security -Winit-self -Wlogical-op -Wpointer-arith -Wshadow -Wuninitialized -Wunknown-pragmas -Wunused-variable -Wno-missing-field-initializers -Wno-missing-include-dirs -Wno-unused-parameter -fdiagnostics-color=always -Wno-stringop-truncation -fno-builtin-printf -fno-strength-reduce -Wformat=1 -Wunused-but-set-variable -Wno-format-truncation -fcheck-new -Wreorder -Wno-overloaded-virtual -fno-rtti -fno-exceptions -fno-sized-deallocation -fno-threadsafe-statics -nostdinc++ -Wno-cast-align -Wno-deprecated-copy -Wno-address-of-packed-member -MD -MT src/drivers/uavcan/libuavcan_drivers/CMakeFiles/uavcan_stm32h7_driver.dir/src/uc_stm32h7_can.cpp.obj -MF src/drivers/uavcan/libuavcan_drivers/CMakeFiles/uavcan_stm32h7_driver.dir/src/uc_stm32h7_can.cpp.obj.d -o src/drivers/uavcan/libuavcan_drivers/CMakeFiles/uavcan_stm32h7_driver.dir/src/uc_stm32h7_can.cpp.obj -c /home/ash-blake/Vimana-PX4-Module/src/drivers/uavcan/uavcan_drivers/stm32h7/driver/src/uc_stm32h7_can.cpp
+/tmp/ccCWxe2s.s: Assembler messages:
+/tmp/ccCWxe2s.s:473: Error: selected processor does not support requested special purpose register -- `mrs r2,basepri'
+/tmp/ccCWxe2s.s:497: Error: selected processor does not support requested special purpose register -- `mrs r1,primask'
+/tmp/ccCWxe2s.s:498: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccCWxe2s.s:499: Error: selected processor does not support requested special purpose register -- `msr basepri,ip'
+/tmp/ccCWxe2s.s:500: Error: selected processor does not support requested special purpose register -- `msr primask,r1'
+/tmp/ccCWxe2s.s:557: Error: selected processor does not support requested special purpose register -- `msr basepri,r3'
+[139/1284] Generating nuttx/drivers/libdrivers.a
+FAILED: NuttX/nuttx/drivers/libdrivers.a /home/ash-blake/Vimana-PX4-Module/build/cubepilot_cubeorangeplus_vimana_vtol/NuttX/nuttx/drivers/libdrivers.a 
+cd /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx && /usr/bin/cmake -E remove -f /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx/drivers/libdrivers.a && find drivers -type f -name *.o -delete && make -C drivers --no-print-directory --silent all TOPDIR="/home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx" KERNEL=y EXTRAFLAGS=-D__KERNEL__ && /usr/bin/cmake -E copy_if_different /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx/drivers/libdrivers.a /home/ash-blake/Vimana-PX4-Module/build/cubepilot_cubeorangeplus_vimana_vtol/NuttX/nuttx/drivers/libdrivers.a
+/tmp/cc1ZvlEo.s: Assembler messages:
+/tmp/cc1ZvlEo.s:208: Error: selected processor does not support requested special purpose register -- `mrs fp,basepri'
+/tmp/cc1ZvlEo.s:227: Error: selected processor does not support requested special purpose register -- `mrs r7,primask'
+/tmp/cc1ZvlEo.s:228: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc1ZvlEo.s:229: Error: selected processor does not support requested special purpose register -- `msr basepri,r10'
+/tmp/cc1ZvlEo.s:230: Error: selected processor does not support requested special purpose register -- `msr primask,r7'
+/tmp/cc1ZvlEo.s:327: Error: selected processor does not support requested special purpose register -- `msr basepri,fp'
+/tmp/cc1ZvlEo.s:670: Error: selected processor does not support requested special purpose register -- `mrs r8,basepri'
+/tmp/cc1ZvlEo.s:690: Error: selected processor does not support requested special purpose register -- `mrs r6,primask'
+/tmp/cc1ZvlEo.s:691: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc1ZvlEo.s:692: Error: selected processor does not support requested special purpose register -- `msr basepri,r3'
+/tmp/cc1ZvlEo.s:693: Error: selected processor does not support requested special purpose register -- `msr primask,r6'
+/tmp/cc1ZvlEo.s:758: Error: selected processor does not support requested special purpose register -- `msr basepri,r8'
+/tmp/cc1ZvlEo.s:812: Error: selected processor does not support requested special purpose register -- `msr basepri,r8'
+/tmp/cc1ZvlEo.s:855: Error: selected processor does not support requested special purpose register -- `msr basepri,r8'
+/tmp/cc1ZvlEo.s:1005: Error: selected processor does not support requested special purpose register -- `mrs r8,basepri'
+/tmp/cc1ZvlEo.s:1028: Error: selected processor does not support requested special purpose register -- `mrs r3,primask'
+/tmp/cc1ZvlEo.s:1029: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc1ZvlEo.s:1030: Error: selected processor does not support requested special purpose register -- `msr basepri,r2'
+/tmp/cc1ZvlEo.s:1031: Error: selected processor does not support requested special purpose register -- `msr primask,r3'
+/tmp/cc1ZvlEo.s:1079: Error: selected processor does not support requested special purpose register -- `msr basepri,r8'
+/tmp/cc1ZvlEo.s:1165: Error: selected processor does not support requested special purpose register -- `msr basepri,r8'
+/tmp/cc1ZvlEo.s:1698: Error: selected processor does not support requested special purpose register -- `mrs r4,basepri'
+/tmp/cc1ZvlEo.s:1719: Error: selected processor does not support requested special purpose register -- `mrs r3,primask'
+/tmp/cc1ZvlEo.s:1720: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc1ZvlEo.s:1721: Error: selected processor does not support requested special purpose register -- `msr basepri,r2'
+/tmp/cc1ZvlEo.s:1722: Error: selected processor does not support requested special purpose register -- `msr primask,r3'
+/tmp/cc1ZvlEo.s:1767: Error: selected processor does not support requested special purpose register -- `msr basepri,r4'
+/tmp/cc1ZvlEo.s:2090: Error: selected processor does not support requested special purpose register -- `mrs r8,basepri'
+/tmp/cc1ZvlEo.s:2111: Error: selected processor does not support requested special purpose register -- `mrs r3,primask'
+/tmp/cc1ZvlEo.s:2112: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc1ZvlEo.s:2113: Error: selected processor does not support requested special purpose register -- `msr basepri,r2'
+/tmp/cc1ZvlEo.s:2114: Error: selected processor does not support requested special purpose register -- `msr primask,r3'
+/tmp/cc1ZvlEo.s:2159: Error: selected processor does not support requested special purpose register -- `msr basepri,r8'
+/tmp/cc1ZvlEo.s:2685: Error: selected processor does not support requested special purpose register -- `mrs r0,basepri'
+/tmp/cc1ZvlEo.s:2706: Error: selected processor does not support requested special purpose register -- `mrs r3,primask'
+/tmp/cc1ZvlEo.s:2707: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc1ZvlEo.s:2708: Error: selected processor does not support requested special purpose register -- `msr basepri,r2'
+/tmp/cc1ZvlEo.s:2709: Error: selected processor does not support requested special purpose register -- `msr primask,r3'
+/tmp/cc1ZvlEo.s:2789: Error: selected processor does not support requested special purpose register -- `msr basepri,r0'
+/tmp/cc1ZvlEo.s:2856: Error: selected processor does not support requested special purpose register -- `mrs r0,basepri'
+/tmp/cc1ZvlEo.s:2877: Error: selected processor does not support requested special purpose register -- `mrs r3,primask'
+/tmp/cc1ZvlEo.s:2878: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc1ZvlEo.s:2879: Error: selected processor does not support requested special purpose register -- `msr basepri,r2'
+/tmp/cc1ZvlEo.s:2880: Error: selected processor does not support requested special purpose register -- `msr primask,r3'
+/tmp/cc1ZvlEo.s:2957: Error: selected processor does not support requested special purpose register -- `mrs r0,basepri'
+/tmp/cc1ZvlEo.s:2978: Error: selected processor does not support requested special purpose register -- `mrs r3,primask'
+/tmp/cc1ZvlEo.s:2979: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc1ZvlEo.s:2980: Error: selected processor does not support requested special purpose register -- `msr basepri,r2'
+/tmp/cc1ZvlEo.s:2981: Error: selected processor does not support requested special purpose register -- `msr primask,r3'
+/tmp/cc1ZvlEo.s:3069: Error: selected processor does not support requested special purpose register -- `mrs r7,basepri'
+/tmp/cc1ZvlEo.s:3090: Error: selected processor does not support requested special purpose register -- `mrs r3,primask'
+/tmp/cc1ZvlEo.s:3091: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc1ZvlEo.s:3092: Error: selected processor does not support requested special purpose register -- `msr basepri,r2'
+/tmp/cc1ZvlEo.s:3093: Error: selected processor does not support requested special purpose register -- `msr primask,r3'
+/tmp/cc1ZvlEo.s:3161: Error: selected processor does not support requested special purpose register -- `msr basepri,r7'
+/tmp/cc1ZvlEo.s:3341: Error: selected processor does not support requested special purpose register -- `mrs r6,basepri'
+/tmp/cc1ZvlEo.s:3362: Error: selected processor does not support requested special purpose register -- `mrs r3,primask'
+/tmp/cc1ZvlEo.s:3363: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc1ZvlEo.s:3364: Error: selected processor does not support requested special purpose register -- `msr basepri,r2'
+/tmp/cc1ZvlEo.s:3365: Error: selected processor does not support requested special purpose register -- `msr primask,r3'
+/tmp/cc1ZvlEo.s:3439: Error: selected processor does not support requested special purpose register -- `msr basepri,r6'
+/tmp/cc1ZvlEo.s:3621: Error: selected processor does not support requested special purpose register -- `mrs r5,basepri'
+/tmp/cc1ZvlEo.s:3642: Error: selected processor does not support requested special purpose register -- `mrs r3,primask'
+/tmp/cc1ZvlEo.s:3643: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc1ZvlEo.s:3644: Error: selected processor does not support requested special purpose register -- `msr basepri,r2'
+/tmp/cc1ZvlEo.s:3645: Error: selected processor does not support requested special purpose register -- `msr primask,r3'
+/tmp/cc1ZvlEo.s:3693: Error: selected processor does not support requested special purpose register -- `msr basepri,r5'
+make[1]: *** [Makefile:92: serial.o] Error 1
+[140/1284] Building CXX object src/drivers/uavcan/libuavcan_drivers/CMakeFiles/uavcan_stm32h7_driver.dir/src/uc_stm32h7_clock.cpp.obj
+FAILED: src/drivers/uavcan/libuavcan_drivers/CMakeFiles/uavcan_stm32h7_driver.dir/src/uc_stm32h7_clock.cpp.obj 
+/usr/bin/ccache /opt/gcc-arm-none-eabi/bin/arm-none-eabi-g++ -DCONFIG_ARCH_BOARD_CUBEPILOT_CUBEORANGEPLUS -DUAVCAN_CPP_VERSION=UAVCAN_CPP03 -DUAVCAN_DRIVER=uavcan_stm32h7 -DUAVCAN_IMPLEMENT_PLACEMENT_NEW=1 -DUAVCAN_MEM_POOL_BLOCK_SIZE=48 -DUAVCAN_NO_ASSERTIONS -DUAVCAN_NUM_IFACES=2 -DUAVCAN_PLATFORM=generic -DUAVCAN_STM32H7_NUM_IFACES=2 -DUAVCAN_STM32H7_NUTTX=1 -DUAVCAN_STM32H7_TIMER_NUMBER=5 -D_SYS_CDEFS_H_ -D_SYS_REENT_H_ -D__CUSTOM_FILE_IO__ -D__PX4_NUTTX -D__STDC_FORMAT_MACROS -I/home/ash-blake/Vimana-PX4-Module/boards/cubepilot/cubeorangeplus/src -I/home/ash-blake/Vimana-PX4-Module/platforms/nuttx/src/px4/common/include -I/home/ash-blake/Vimana-PX4-Module/build/cubepilot_cubeorangeplus_vimana_vtol -I/home/ash-blake/Vimana-PX4-Module/build/cubepilot_cubeorangeplus_vimana_vtol/src/lib -I/home/ash-blake/Vimana-PX4-Module/platforms/nuttx/src/px4/stm/stm32h7/include -I/home/ash-blake/Vimana-PX4-Module/platforms/common -I/home/ash-blake/Vimana-PX4-Module/platforms/common/include -I/home/ash-blake/Vimana-PX4-Module/src -I/home/ash-blake/Vimana-PX4-Module/src/include -I/home/ash-blake/Vimana-PX4-Module/src/lib -I/home/ash-blake/Vimana-PX4-Module/src/lib/matrix -I/home/ash-blake/Vimana-PX4-Module/src/modules -I/home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx/arch/arm/src/armv7-m -I/home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx/arch/arm/src/chip -I/home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx/arch/arm/src/common -I/home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/apps/include -I/home/ash-blake/Vimana-PX4-Module/build/cubepilot_cubeorangeplus_vimana_vtol/external/Install/include -I/home/ash-blake/Vimana-PX4-Module/src/drivers/uavcan/uavcan_drivers/stm32h7/driver/./include -I/home/ash-blake/Vimana-PX4-Module/src/drivers/uavcan/libdronecan/libuavcan/include -I/home/ash-blake/Vimana-PX4-Module/src/drivers/uavcan/libdronecan/libuavcan/include/dsdlc_generated -isystem /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/include/cxx -isystem /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx/include/cxx -isystem /home/ash-blake/Vimana-PX4-Module/platforms/nuttx/NuttX/nuttx/include -Os -DNDEBUG -std=gnu++14 -g -fdata-sections -ffunction-sections -fomit-frame-pointer -fmerge-all-constants -fno-signed-zeros -fno-trapping-math -freciprocal-math -fno-math-errno -fno-strict-aliasing -fvisibility=hidden -include visibility.h -Wall -Wextra -Werror -Warray-bounds -Wcast-align -Wdisabled-optimization -Wdouble-promotion -Wfatal-errors -Wfloat-equal -Wformat-security -Winit-self -Wlogical-op -Wpointer-arith -Wshadow -Wuninitialized -Wunknown-pragmas -Wunused-variable -Wno-missing-field-initializers -Wno-missing-include-dirs -Wno-unused-parameter -fdiagnostics-color=always -Wno-stringop-truncation -fno-builtin-printf -fno-strength-reduce -Wformat=1 -Wunused-but-set-variable -Wno-format-truncation -fcheck-new -Wreorder -Wno-overloaded-virtual -fno-rtti -fno-exceptions -fno-sized-deallocation -fno-threadsafe-statics -nostdinc++ -Wno-cast-align -Wno-deprecated-copy -Wno-address-of-packed-member -MD -MT src/drivers/uavcan/libuavcan_drivers/CMakeFiles/uavcan_stm32h7_driver.dir/src/uc_stm32h7_clock.cpp.obj -MF src/drivers/uavcan/libuavcan_drivers/CMakeFiles/uavcan_stm32h7_driver.dir/src/uc_stm32h7_clock.cpp.obj.d -o src/drivers/uavcan/libuavcan_drivers/CMakeFiles/uavcan_stm32h7_driver.dir/src/uc_stm32h7_clock.cpp.obj -c /home/ash-blake/Vimana-PX4-Module/src/drivers/uavcan/uavcan_drivers/stm32h7/driver/src/uc_stm32h7_clock.cpp
+/tmp/cc5ZkK9Y.s: Assembler messages:
+/tmp/cc5ZkK9Y.s:527: Error: selected processor does not support requested special purpose register -- `mrs r2,basepri'
+/tmp/cc5ZkK9Y.s:551: Error: selected processor does not support requested special purpose register -- `mrs r1,primask'
+/tmp/cc5ZkK9Y.s:552: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cc5ZkK9Y.s:553: Error: selected processor does not support requested special purpose register -- `msr basepri,ip'
+/tmp/cc5ZkK9Y.s:554: Error: selected processor does not support requested special purpose register -- `msr primask,r1'
+/tmp/cc5ZkK9Y.s:611: Error: selected processor does not support requested special purpose register -- `msr basepri,r3'
+[141/1284] Generating nuttx/fs/libfs.a
+[142/1284] Generating apps/libapps.a
+[143/1284] Generating uORB topic ucdr headers
+[144/1284] Generating uORB compressed fields
+ninja: build stopped: subcommand failed.
+make: *** [Makefile:222: cubepilot_cubeorangeplus_vimana_vtol] Error 1
