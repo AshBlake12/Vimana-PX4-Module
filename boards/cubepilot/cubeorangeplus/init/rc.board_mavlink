@@ -1,10 +1,13 @@
 #!/bin/sh
 #
 # Board specific MAVLink startup script.
-#------------------------------------------------------------------------------
 
-# Start ADS-B receiver mavlink connection if console not present
+
+# start USB MAVLink in Normal mode for QGC autodetection
+mavlink start -d /dev/ttyACM0 -b 2000000 -m config_usb
+
+# start ADS-B receiver mavlink connection if console not present
 if [ ! -e /dev/console ]
 then
-	mavlink start -d /dev/ttyS4 -b 57600 -m minimal
+    mavlink start -d /dev/ttyS4 -b 57600 -m minimal
 fi

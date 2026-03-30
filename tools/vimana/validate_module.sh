@@ -1,3 +1,5 @@
+#STILL WORKING ON THIS! 
+
 #!/bin/bash
 # Pre-Build Validation for Vimana Module
 # Run this BEFORE building to catch issues early
