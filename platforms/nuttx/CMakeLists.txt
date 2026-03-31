@@ -425,6 +425,21 @@ if (TARGET parameters_xml AND TARGET airframes_xml)
 
 	string(REPLACE ".elf" ".px4" fw_package ${PX4_BINARY_DIR}/${FW_NAME})
 
+	# Vimana signing: optionally embed certificate chain artifacts
+	set(VIMANA_SIGN_ARGS "")
+	if(DEFINED ENV{VIMANA_RELEASE_CERT} AND DEFINED ENV{VIMANA_FW_SIGNATURE})
+		set(VIMANA_SIGN_ARGS
+			--release_cert $ENV{VIMANA_RELEASE_CERT}
+			--firmware_signature $ENV{VIMANA_FW_SIGNATURE}
+		)
+		if(DEFINED ENV{VIMANA_MASTER_PUB_KEY})
+			list(APPEND VIMANA_SIGN_ARGS --master_pub_key $ENV{VIMANA_MASTER_PUB_KEY})
+		endif()
+		message(STATUS "Vimana signing: ENABLED")
+	else()
+		message(STATUS "Vimana signing: disabled (set VIMANA_RELEASE_CERT and VIMANA_FW_SIGNATURE to enable)")
+	endif()
+
 	add_custom_command(
 		OUTPUT ${fw_package}
 		COMMAND
@@ -433,7 +448,9 @@ if (TARGET parameters_xml AND TARGET airframes_xml)
 				--git_identity ${PX4_SOURCE_DIR}
 				--parameter_xml ${PX4_BINARY_DIR}/parameters.xml
 				--airframe_xml ${PX4_BINARY_DIR}/airframes.xml
-				--image ${PX4_BINARY_DIR}/${PX4_CONFIG}.bin > ${fw_package}
+				--image ${PX4_BINARY_DIR}/${PX4_CONFIG}.bin
+				${VIMANA_SIGN_ARGS}
+				> ${fw_package}
 		DEPENDS
 			${PX4_BINARY_DIR}/${PX4_CONFIG}.bin
 			airframes_xml

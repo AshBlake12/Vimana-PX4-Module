@@ -61,6 +61,22 @@ import base64
 import time
 import array
 import os
+import hashlib
+
+# Vimana signing verification
+try:
+    _TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
+    sys.path.insert(0, os.path.join(_TOOLS_DIR, 'vimana_signing'))
+    from vmn_verify import (
+        verify_vimana_update,
+        is_board_locked,
+        lock_board,
+        _load_pub_key_from_pem,
+        _pub_key_raw_bytes,
+    )
+    _VIMANA_SIGNING_AVAILABLE = True
+except ImportError:
+    _VIMANA_SIGNING_AVAILABLE = False
 
 from sys import platform as _platform
 
@@ -146,8 +162,50 @@ class firmware(object):
         while ((len(self.image) % 4) != 0):
             self.image.extend(b'\xff')
 
+        # Vimana signing metadata
+        self.vimana_signed = self.desc.get('vimana_signed', False)
+        self.vimana_release_cert = None
+        self.vimana_firmware_signature = None
+        self.vimana_master_key_hash = None
+
+        if self.vimana_signed:
+            self.vimana_release_cert = base64.b64decode(self.desc['vimana_release_cert'])
+            self.vimana_firmware_signature = base64.b64decode(self.desc['vimana_firmware_signature'])
+            self.vimana_master_key_hash = self.desc.get('vimana_master_key_hash', '')
+
     def property(self, propname):
         return self.desc[propname]
+
+    def is_vimana_signed(self):
+        """Check if this firmware image carries Vimana signing artifacts."""
+        return self.vimana_signed
+
+    def verify_vimana_signature(self, master_pub_key_raw):
+        """
+        Verify the full Vimana certificate chain.
+
+        Args:
+            master_pub_key_raw: 64-byte raw X||Y master public key
+
+        Returns:
+            (success: bool, reason: str)
+        """
+        if not self.vimana_signed:
+            return False, "Firmware is not signed"
+
+        if not _VIMANA_SIGNING_AVAILABLE:
+            return False, ("Vimana signing verification module not available. "
+                           "Install 'cryptography' package: pip install cryptography")
+
+        # Get the raw firmware image (before padding) for signature verification
+        raw_image = zlib.decompress(base64.b64decode(self.desc['image']))
+
+        return verify_vimana_update(
+            master_pub_key=master_pub_key_raw,
+            release_cert_blob=self.vimana_release_cert,
+            firmware_image=raw_image,
+            firmware_signature=self.vimana_firmware_signature,
+        )
 
     def __crc32(self, bytes, state):
         for byte in bytes:
@@ -606,8 +664,7 @@ class uploader:
 
         self.version = self.__getVersion()
 
-    # upload the firmware
-    def upload(self, fw_list, force=False, boot_delay=None, boot_check=False, force_erase=False):
+    def upload(self, fw_list, force=False, boot_delay=None, boot_check=False, force_erase=False, vimana_master_key=None):
         self.force_erase = force_erase
         # select correct binary
         found_suitable_firmware = False
@@ -638,6 +695,70 @@ class uploader:
         print()
 
         print(f"Bootloader version: {self.version}")
+
+        # ---------------------------------------------------------------
+        # Vimana Secure Boot: signature verification & lockout enforcement
+        # ---------------------------------------------------------------
+        board_sn_hex = f"{self.board_type}_{self.board_rev}"
+
+        if fw.is_vimana_signed():
+            print("\n" + "=" * 56)
+            print("  VIMANA SECURE BOOT: Signed firmware detected")
+            print("=" * 56)
+
+            if not _VIMANA_SIGNING_AVAILABLE:
+                raise RuntimeError(
+                    "Firmware is Vimana-signed but the 'cryptography' Python package "
+                    "is not installed. Install it with: pip install cryptography"
+                )
+
+            # Load the master public key for verification
+            if vimana_master_key is not None:
+                if vimana_master_key.endswith('.pem'):
+                    master_pub = _load_pub_key_from_pem(vimana_master_key)
+                    master_pub_raw = _pub_key_raw_bytes(master_pub)
+                else:
+                    with open(vimana_master_key, 'rb') as mkf:
+                        master_pub_raw = mkf.read()
+            else:
+                # Use the embedded master key from vmn_keys.h
+                master_pub_raw = bytes([
+                    0x08, 0x25, 0x61, 0x7F, 0x3B, 0x12, 0xFE, 0x98,
+                    0x65, 0x73, 0xF7, 0x35, 0xC8, 0x44, 0xB2, 0x8B,
+                    0xF2, 0x47, 0xD5, 0xC4, 0x18, 0xB6, 0xCC, 0xE2,
+                    0x7B, 0x31, 0x19, 0x9E, 0x88, 0x0B, 0xCB, 0x84,
+                    0x8A, 0x58, 0xEE, 0x70, 0x8C, 0x2A, 0xFE, 0xA4,
+                    0xE0, 0xF4, 0x51, 0x6F, 0xCA, 0xE4, 0x62, 0x26,
+                    0x5B, 0x75, 0x49, 0x05, 0xAD, 0xB6, 0x36, 0xAA,
+                    0x1A, 0xB9, 0x48, 0xFC, 0x8F, 0xB1, 0x1C, 0xE5
+                ])
+
+            # Verify the full certificate chain
+            print("Verifying certificate chain...")
+            success, reason = fw.verify_vimana_signature(master_pub_raw)
+            if success:
+                print(f"  [PASS] {reason}")
+                print("  [PASS] Firmware signature VERIFIED")
+            else:
+                print(f"  [FAIL] VERIFICATION FAILED: {reason}")
+                raise RuntimeError(f"Vimana signature verification failed: {reason}")
+
+        elif _VIMANA_SIGNING_AVAILABLE and is_board_locked(board_sn_hex):
+            # Board has been locked to signed-only firmware
+            print("\n" + "=" * 56)
+            print("  VIMANA SECURE BOOT: Board is LOCKED to signed FW")
+            print("=" * 56)
+            print("This board has previously accepted a signed firmware.")
+            print("Unsigned firmware uploads are permanently blocked.")
+            if not force:
+                raise RuntimeError(
+                    "Board is locked to signed firmware only. "
+                    "This is an irreversible security policy."
+                )
+            else:
+                print("WARNING: --force flag used, bypassing lockout (host-side only)")
+        else:
+            print("Vimana signing: not present (unsigned firmware)")
 
         # Make sure we are doing the right thing
         start = _time()
@@ -734,6 +855,12 @@ class uploader:
         if boot_delay is not None:
             self.__set_boot_delay(boot_delay)
 
+        # Vimana: create lockout marker after successful signed upload
+        if fw.is_vimana_signed() and _VIMANA_SIGNING_AVAILABLE:
+            lockout_path = lock_board(board_sn_hex)
+            print(f"\n  [LOCKED] Board locked to signed firmware (marker: {lockout_path})")
+            print("    Future unsigned uploads will be rejected.")
+
         print("\nRebooting.", end='')
         self.__reboot()
         self.port.close()
@@ -818,6 +945,8 @@ def main():
     parser.add_argument('--force-erase', action="store_true", help="Do not perform the blank check, always erase every sector of the application space")
     parser.add_argument('--boot-delay', type=int, default=None, help='minimum boot delay to store in flash')
     parser.add_argument('--use-protocol-splitter-format', action='store_true', help='use protocol splitter format for reboot')
+    parser.add_argument('--vimana-master-key', action="store", default=None,
+        help="Path to Vimana master public key file (.pem or .bin) for signature verification")
     parser.add_argument('firmware', action="store", nargs='+', help="Firmware file(s)")
     args = parser.parse_args()
 
@@ -934,7 +1063,7 @@ def main():
 
                 try:
                     # ok, we have a bootloader, try flashing it
-                    up.upload(args.firmware, force=args.force, boot_delay=args.boot_delay, force_erase=args.force_erase)
+                    up.upload(args.firmware, force=args.force, boot_delay=args.boot_delay, force_erase=args.force_erase, vimana_master_key=args.vimana_master_key)
 
                     # if we made this far without raising exceptions, the upload was successful
                     successful = True
